@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dos ceras, dos mundos: parafina y coco</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Outfit:wght@400;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="room" id="h">
+<h1>Dos ceras,<br>dos mundos</h1>
+<p>Una vela de parafina y otra de cera de coco, hechas a mano y encendidas al mismo tiempo. Mirá cuál dura más.</p>
+<div class="duel">
+<div class="col par"><div data-c="par"></div><span class="nm">Parafina</span><span class="clk">0 min</span><span class="st">Apagada</span></div>
+<div class="col coc"><div data-c="coc"></div><span class="nm">Coco</span><span class="clk">0 min</span><span class="st">Apagada</span></div>
+</div>
+<div class="ctl"><button class="btn" id="go">Encender las dos</button><label>Velocidad <select id="sp"><option value="4">Lenta</option><option value="8" selected>Media</option><option value="16">Rápida</option></select></label></div>
+<p id="msg" aria-live="polite"></p>
+<p style="font-size:.9rem;opacity:.75">La prueba real duró 1 h 13 min con parafina y 1 h 50 min con coco. Acá el tiempo corre más rápido.</p>
+<nav class="nav"><a href="#arde">Cómo arde</a><a href="#proceso">Proceso</a><a href="#ceras">Las dos ceras</a><a href="#prueba">La prueba</a><a href="#fuentes">Fuentes</a></nav>
+</header>
+
+<main>
+<section class="sec" id="arde">
+<h2>Cómo arde una vela</h2>
+<p>Una vela es cera con una mecha por dentro. La llama derrite la cera cercana, que sube por la mecha por capilaridad. Arriba, el calor la convierte en vapor y se mezcla con el oxígeno del aire.</p>
+<div class="dk demo">
+<div id="ec"></div>
+<div><p style="margin:0">Quitá un elemento y mirá qué pasa.</p><div id="el"></div><p id="et" aria-live="polite" style="min-height:3.4em"></p></div>
+</div>
+<ul class="chips"><li>Iluminar</li><li>Decorar</li><li>Luz cálida y tranquila</li><li>Aromatizar</li><li>Cumpleaños y fiestas</li><li>Ceremonias religiosas</li><li>Regalo artesanal</li><li>Luz de emergencia</li></ul>
+</section>
+
+<section class="sec" id="proceso" style="padding-top:0">
+<h2>Cómo se hace</h2>
+<p>La misma idea, dos escalas: una fábrica con tanques y túneles, y una mesa con una olla y un palito.</p>
+<div id="tabs" role="tablist"><button role="tab" data-k="ind">Industrial</button><button role="tab" data-k="art">Artesanal</button></div>
+<p class="mu" id="pm"></p>
+<div class="proc">
+<div><ol class="steps" id="pst"></ol>
+<div class="pc"><button id="pv" aria-label="Paso anterior">Anterior</button><button id="pp">Reproducir</button><button id="nx" aria-label="Paso siguiente">Siguiente</button></div></div>
+<div class="dk stage"><div class="jar" id="jar"><i id="wk2"></i><div class="in"><div id="wx"></div></div></div><b id="cap"></b><div id="pd" style="margin-top:12px;text-align:left"></div></div>
+</div>
+</section>
+
+<section class="sec" id="ceras" style="padding-top:0">
+<h2>Las dos ceras</h2>
+<div class="two">
+<div class="card"><h3 style="color:var(--par)">Parafina</h3><p>De origen mineral, derivada del petróleo. Es la más común y barata. Se derrite fácil, se moldea bien y retiene muy bien los aromas.</p></div>
+<div class="card"><h3 style="color:var(--coc)">Coco</h3><p>De origen vegetal, más nueva, más cara y más natural. Es cremosa y suave, deja la superficie lisa y es ideal para frascos. Tiene un punto de fusión más bajo.</p></div>
+</div>
+<div class="wrap"><table><thead><tr><th>Característica</th><th>Parafina</th><th>Coco</th></tr></thead><tbody>
+<tr><td>Origen</td><td>Mineral, derivada del petróleo</td><td>Vegetal, deriva del coco</td></tr>
+<tr><td>Precio</td><td>Más barata y fácil de conseguir</td><td>Más cara</td></tr>
+<tr><td>Textura</td><td>Más dura</td><td>Más suave y cremosa</td></tr>
+<tr><td>Acabado</td><td>Puede quedar menos lisa</td><td>Superficie muy lisa</td></tr>
+<tr><td>Aromas</td><td>Retiene muy bien el perfume</td><td>También lo retiene, con aromas más suaves</td></tr>
+<tr><td>Duración (según la teoría)</td><td>Dura más tiempo encendida</td><td>Se consume un poco más rápido</td></tr>
+</tbody></table></div>
+</section>
+
+<section class="sec" id="prueba" style="padding-top:0">
+<h2>La prueba</h2>
+<p><b>Pregunta:</b> ¿qué diferencias hay entre una vela de parafina y una de coco en el tiempo de combustión, la llama y los residuos?</p>
+<p><b>Hipótesis:</b> con igual tamaño y misma mecha, la parafina, más dura y con punto de fusión más alto, duraría más; la de coco se consumiría antes. Se mantuvieron iguales el tamaño, la mecha y el lugar de la prueba.</p>
+<div id="bars"></div>
+<div class="two">
+<div class="card"><h3 style="color:var(--par)">Parafina</h3><p>Llama más alta y un poco inestable. Dejó más hollín y cera derretida alrededor.</p></div>
+<div class="card"><h3 style="color:var(--coc)">Coco</h3><p>Llama más baja y más quieta. Dejó menos hollín y no largó tanto humo.</p></div>
+</div>
+<h3 style="margin-top:28px">Conclusión</h3>
+<p>La vela de coco ardió 37 minutos más que la de parafina, al revés de lo que planteaba la hipótesis. Como dice el trabajo, los resultados no siempre son como uno los imagina, y hay que explicar por qué pasa para llegar a una conclusión. Observar bien y anotar los datos permite relacionar la teoría con la práctica.</p>
+</section>
+</main>
+
+<footer id="fuentes"><div>
+<h2>Fuentes</h2>
+<ul>
+<li><a href="https://www.granvelada.com/blog/que-es-la-parafina/">Gran Velada, ¿Qué es la parafina?</a></li>
+<li><a href="https://www.granvelada.com/blog/que-es-la-cera-de-coco/">Gran Velada, ¿Qué es la cera de coco?</a></li>
+<li><a href="https://www.hacervelas.es/blog/como-funciona-una-vela-por-que-se-enciende">Hacer Velas, Cómo funciona una vela</a></li>
+<li><a href="https://www.hacervelas.es/blog/como-hacer-velas-artesanales/">Hacer Velas, Cómo hacer velas artesanales</a></li>
+<li><a href="https://www.cerabella.com/es/blog/fabricacion-velas/">Cerabella, Fabricación de velas</a></li>
+<li><a href="https://www.ecologiaverde.com/como-se-hacen-las-velas-4032.html">Ecología Verde, Cómo se hacen las velas</a></li>
+<li><a href="https://www.velaseinciensos.com/blog/historia-de-las-velas/">Velas e Inciensos, Historia de las velas</a></li>
+</ul>
+<p style="margin-top:24px;opacity:.8">Producción de vela: dos ceras, dos mundos.<br>Gómez, Santiago y Rivas, María. Colegio Madre Teresa de Calcuta, 5to 2da, 2026.<br>Docentes: Ydiarte, Maribel y Ocampo, Blanca. Introducción a la Investigación en Ciencias Naturales y Química.</p>
+</div></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
